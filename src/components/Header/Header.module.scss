@@ -1,0 +1,27 @@
+.header {
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 5px;
+  background-color: white;
+  padding: 5px;
+  border-bottom: 1px solid black;
+}
+.statusIsLoggedBox {
+  background: yellow;
+  &:hover {
+    font-weight: 900;
+    cursor: pointer;
+  }
+}
+.linksBox {
+  display: flex;
+  justify-content: space-around;
+  a {
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+    &:hover {
+      color: red;
+    }
+  }
+}

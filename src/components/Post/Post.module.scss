@@ -1,0 +1,15 @@
+.postBox {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 5px;
+
+  .post {
+    border: 1px solid black;
+    margin: 5px auto;
+    padding: 5px;
+  }
+  .titleLine {
+    font-weight: 700;
+  }
+}
