@@ -10,7 +10,6 @@ export const useGetDataRequest = <T>(url: string): [T | undefined, boolean] => {
       try {
         const { data: response } = await apiInstance.get<T>(url);
         setData(response);
-        console.log(response);
       } catch (error) {
         console.error(error);
       }

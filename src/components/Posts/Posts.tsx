@@ -1,11 +1,11 @@
 import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useDeleteDataRequest, useGetDataRequest } from "hooks";
 
 import { TPost } from "types";
-import { useDeleteDataRequest, useGetDataRequest } from "hooks";
 
 import styles from "./Posts.module.scss";
 import Spinner from "common/Spinner/Spinner";
-import { useEffect, useState } from "react";
 
 const Posts = () => {
   const navigate = useNavigate();
@@ -46,14 +46,23 @@ const Posts = () => {
               X
             </span>
             <div>
+              <button
+                className={styles.titleLine}
+                onClick={() => navigate(`/posts/${p.id}`)}
+              >
+                To post
+              </button>
+            </div>
+            <div>
               <span className={styles.titleLine}>userId:</span>
               <span>{p.userId}</span>
             </div>
+
             <div>
               <span className={styles.titleLine}>id:</span>
               <span>{p.id}</span>
             </div>
-            <div onClick={() => navigate(`/posts/${p.id}`)}>
+            <div>
               <span className={styles.titleLine}>title:</span>
               <span>{p.title}</span>
             </div>

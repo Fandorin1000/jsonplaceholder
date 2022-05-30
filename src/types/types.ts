@@ -1,6 +1,6 @@
 export type TPost = {
-  userId: number;
-  id: number;
-  title: string;
-  body: string;
+  userId: number | undefined;
+  id: number | undefined;
+  title: string | undefined;
+  body: string | undefined;
 };
